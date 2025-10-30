@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ui_login</class>
+ <widget class="QMainWindow" name="ui_login">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* === Tablas === */
+QTableWidget {
+    background-color: #ffffff;
+    color: #333333;
+    gridline-color: #e0e0e0;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    font-family: &quot;Segoe UI Variable&quot;, &quot;Roboto&quot;, &quot;Open Sans&quot;, sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    selection-background-color: #e8f0fe; /* azul claro al seleccionar */
+    selection-color: #0078d7;
+    alternate-background-color: #f9fafc; /* filas alternadas */
+}
+
+/* Cabecera horizontal */
+QHeaderView::section {
+    background-color: #f1f3f6;
+    color: #333333;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 15px;
+    padding: 8px;
+}
+
+/* Cabecera horizontal al pasar el cursor */
+QHeaderView::section:hover {
+    background-color: #e8ecf1;
+}
+
+/* Celdas */
+QTableWidget::item {
+    padding: 6px;
+    border: none;
+}
+
+/* Celda seleccionada */
+QTableWidget::item:selected {
+    background-color: #e8f0fe;
+    color: #0078d7;
+}
+
+/* Bordes del header alineados al contenido */
+QHeaderView {
+    border: none;
+}
+
+/* Barra de desplazamiento dentro de la tabla */
+QTableCornerButton::section {
+    background-color: #f1f3f6;
+    border: 1px solid #dcdcdc;
+}
+
+/* Scrollbars coherentes dentro de tablas */
+QTableWidget QScrollBar:vertical {
+    border: none;
+    background: #f0f0f0;
+    width: 10px;
+    border-radius: 4px;
+}
+QTableWidget QScrollBar::handle:vertical {
+    background: #cccccc;
+    min-height: 20px;
+    border-radius: 4px;
+}
+QTableWidget QScrollBar::handle:vertical:hover {
+    background: #0078d7;
+}
+QTableWidget QScrollBar::add-line:vertical,
+QTableWidget QScrollBar::sub-line:vertical {
+    height: 0;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <spacer name="verticalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QFrame" name="frame">
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Usuario</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="username_txt">
+         <property name="placeholderText">
+          <string>Ingrese aqui el usuario</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">/* === Tablas === */
+QTableWidget {
+    background-color: #ffffff;
+    color: #333333;
+    gridline-color: #e0e0e0;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    font-family: &quot;Segoe UI Variable&quot;, &quot;Roboto&quot;, &quot;Open Sans&quot;, sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    selection-background-color: #e8f0fe; /* azul claro al seleccionar */
+    selection-color: #0078d7;
+    alternate-background-color: #f9fafc; /* filas alternadas */
+}
+
+/* Cabecera horizontal */
+QHeaderView::section {
+    background-color: #f1f3f6;
+    color: #333333;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 15px;
+    padding: 8px;
+}
+
+/* Cabecera horizontal al pasar el cursor */
+QHeaderView::section:hover {
+    background-color: #e8ecf1;
+}
+
+/* Celdas */
+QTableWidget::item {
+    padding: 6px;
+    border: none;
+}
+
+/* Celda seleccionada */
+QTableWidget::item:selected {
+    background-color: #e8f0fe;
+    color: #0078d7;
+}
+
+/* Bordes del header alineados al contenido */
+QHeaderView {
+    border: none;
+}
+
+/* Barra de desplazamiento dentro de la tabla */
+QTableCornerButton::section {
+    background-color: #f1f3f6;
+    border: 1px solid #dcdcdc;
+}
+
+/* Scrollbars coherentes dentro de tablas */
+QTableWidget QScrollBar:vertical {
+    border: none;
+    background: #f0f0f0;
+    width: 10px;
+    border-radius: 4px;
+}
+QTableWidget QScrollBar::handle:vertical {
+    background: #cccccc;
+    min-height: 20px;
+    border-radius: 4px;
+}
+QTableWidget QScrollBar::handle:vertical:hover {
+    background: #0078d7;
+}
+QTableWidget QScrollBar::add-line:vertical,
+QTableWidget QScrollBar::sub-line:vertical {
+    height: 0;
+}</string>
+         </property>
+         <property name="text">
+          <string>Contraseña</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="password_txt">
+         <property name="echoMode">
+          <enum>QLineEdit::Password</enum>
+         </property>
+         <property name="placeholderText">
+          <string>Ingrese aqui la contraseña</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <spacer name="verticalSpacer_3">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QPushButton" name="login_btn">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Iniciar Sesion</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../resources/imagenes/iniciarSesion.png</normaloff>../resources/imagenes/iniciarSesion.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>32</width>
+        <height>32</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

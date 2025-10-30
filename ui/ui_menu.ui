@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>832</width>
+    <height>675</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* === Tablas === */
+QTableWidget {
+    background-color: #rgb(0, 167, 204);
+    color: #333333;
+    gridline-color: #e0e0e0;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    font-family: &quot;Segoe UI Variable&quot;, &quot;Roboto&quot;, &quot;Open Sans&quot;, sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    selection-background-color: #e8f0fe; /* azul claro al seleccionar */
+    selection-color: #0078d7;
+    alternate-background-color: #f9fafc; /* filas alternadas */
+}
+
+/* Cabecera horizontal */
+QHeaderView::section {
+    background-color: #f1f3f6;
+    color: #333333;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 15px;
+    padding: 8px;
+}
+
+/* Cabecera horizontal al pasar el cursor */
+QHeaderView::section:hover {
+    background-color: #e8ecf1;
+}
+
+/* Celdas */
+QTableWidget::item {
+    padding: 6px;
+    border: none;
+}
+
+/* Celda seleccionada */
+QTableWidget::item:selected {
+    background-color: #e8f0fe;
+    color: #0078d7;
+}
+
+/* Bordes del header alineados al contenido */
+QHeaderView {
+    border: none;
+}
+
+/* Barra de desplazamiento dentro de la tabla */
+QTableCornerButton::section {
+    background-color: #f1f3f6;
+    border: 1px solid #dcdcdc;
+}
+
+/* Scrollbars coherentes dentro de tablas */
+QTableWidget QScrollBar:vertical {
+    border: none;
+    background: #f0f0f0;
+    width: 10px;
+    border-radius: 4px;
+}
+QTableWidget QScrollBar::handle:vertical {
+    background: #cccccc;
+    min-height: 20px;
+    border-radius: 4px;
+}
+QTableWidget QScrollBar::handle:vertical:hover {
+    background: #0078d7;
+}
+QTableWidget QScrollBar::add-line:vertical,
+QTableWidget QScrollBar::sub-line:vertical {
+    height: 0;
+}
+
+
+
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <spacer name="verticalSpacer_3">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="font">
+       <font>
+        <pointsize>30</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+        <underline>false</underline>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">/* === Tablas === */
+QTableWidget {
+    background-color: #ffffff;
+    color: #333333;
+    gridline-color: #e0e0e0;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    font-family: &quot;Segoe UI Variable&quot;, &quot;Roboto&quot;, &quot;Open Sans&quot;, sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    selection-background-color: #e8f0fe; /* azul claro al seleccionar */
+    selection-color: #0078d7;
+    alternate-background-color: #f9fafc; /* filas alternadas */
+}
+
+/* Cabecera horizontal */
+QHeaderView::section {
+    background-color: #f1f3f6;
+    color: #333333;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 15px;
+    padding: 8px;
+}
+
+/* Cabecera horizontal al pasar el cursor */
+QHeaderView::section:hover {
+    background-color: #e8ecf1;
+}
+
+/* Celdas */
+QTableWidget::item {
+    padding: 6px;
+    border: none;
+}
+
+/* Celda seleccionada */
+QTableWidget::item:selected {
+    background-color: #e8f0fe;
+    color: #0078d7;
+}
+
+/* Bordes del header alineados al contenido */
+QHeaderView {
+    border: none;
+}
+
+/* Barra de desplazamiento dentro de la tabla */
+QTableCornerButton::section {
+    background-color: #f1f3f6;
+    border: 1px solid #dcdcdc;
+}
+
+/* Scrollbars coherentes dentro de tablas */
+QTableWidget QScrollBar:vertical {
+    border: none;
+    background: #f0f0f0;
+    width: 10px;
+    border-radius: 4px;
+}
+QTableWidget QScrollBar::handle:vertical {
+    background: #cccccc;
+    min-height: 20px;
+    border-radius: 4px;
+}
+QTableWidget QScrollBar::handle:vertical:hover {
+    background: #0078d7;
+}
+QTableWidget QScrollBar::add-line:vertical,
+QTableWidget QScrollBar::sub-line:vertical {
+    height: 0;
+}</string>
+      </property>
+      <property name="text">
+       <string>Bienvenido, elija a donde quiere ir</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::AutoText</enum>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="verticalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QPushButton" name="load_productos_btn">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Productos</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../resources/imagenes/productos.png</normaloff>../resources/imagenes/productos.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="load_clientes_btn">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Clientes</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../resources/imagenes/clientes.png</normaloff>../resources/imagenes/clientes.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
