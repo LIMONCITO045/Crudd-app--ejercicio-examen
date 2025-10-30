@@ -6,8 +6,12 @@ class ConexionBD:
 
     def establecerConexionBD(self):
         try:
-            #DRIVER={SQL Server};TIZIENA\MISQLJULIANSERV\SQLEXPRESS;DATABASE=bdsistema;UID=sa;PWD=Password01
-            self.conexion = pyodbc.connect('DRIVER={SQL Server};SERVER=TIZIENA\MISQLJULIANSERV;DATABASE=bdsistema;Trusted_Connection=yes;')
+            #DRIVER={SQL Server};SERVER=TIZIENA\MISQLJULIANSERV;DATABASE=bdsistema;Trusted_Connection=yes;
+            self.conexion = pyodbc.connect('DRIVER={SQL Server};'
+            'SERVER=SALAF008-18\\SQLEXPRESS;'
+            'DATABASE=bdsistema;'
+            'UID=sa;'
+            'PWD=Password01')
             print ("Conexion establecida")
         except Exception as ex:
             print("Error de conexion : " + ex)
